@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "first-post.md",
+                "file": "gohabsgo.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "first-post"
+              "title": "gohabsgo"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "first-post.md",
+                "file": "gohabsgo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for first-post"
+              "title": "Backlinks for gohabsgo"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "first-post.md",
+                "file": "gohabsgo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from first-post"
+              "title": "Outgoing links from gohabsgo"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "first-post.md",
+                "file": "gohabsgo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of first-post"
+              "title": "Outline of gohabsgo"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "e0ea3552b6b8ef98",
   "lastOpenFiles": [
+    "first-post.md",
     "gohabsgo.md",
     "markdown-style-guide.md",
     "third-post.md",

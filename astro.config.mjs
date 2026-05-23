@@ -6,7 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://dora-ysh.github.io',
+	base: '/labrats-site',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{

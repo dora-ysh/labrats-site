@@ -1,4 +1,4 @@
-# Astro Starter Kit: Blog
+# labrats website coming soon!!!! this is just the template
 
 ```sh
 npm create astro@latest -- --template blog

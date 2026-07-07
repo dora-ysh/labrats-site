@@ -1,0 +1,105 @@
+---
+const navItems = [
+  { label: 'Home', href: '' },
+  { label: 'Experiment Log', href: 'blog' },
+  { label: 'Kits', href: 'kits' },
+  { label: 'About Us', href: 'about' },
+  { label: 'Contact', href: 'contact' },
+];
+
+const base = import.meta.env.BASE_URL;
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href={base} class="logo">LABRATS</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        {
+          navItems.map((item) => (
+            <li>
+              <a href={`${base}${item.href}`}>{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <a href={`${base}register`} class="register-btn">Register</a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-navy);
+    padding: 1.25rem 2rem;
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .main-nav a {
+    font-family: var(--font-serif);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .main-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .register-btn {
+    background: #fff;
+    color: var(--color-navy);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .register-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 900px) {
+    .header-inner {
+      flex-wrap: wrap;
+      row-gap: 1rem;
+    }
+
+    .main-nav ul {
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
+  }
+</style>

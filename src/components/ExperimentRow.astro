@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  index?: number;
+}
+
+const { title, slug, index = 0 } = Astro.props;
+const isAlt = index % 2 === 1;
+const base = import.meta.env.BASE_URL;
+---
+
+<li class:list={['experiment-row', { alt: isAlt }]}>
+  <span class="row-title">{title}</span>
+  <a href={`${base}blog/${slug}`} class="details-btn">Details</a>
+</li>
+
+<style>
+  .experiment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--color-bg-light);
+  }
+
+  .experiment-row.alt {
+    background-color: var(--color-row-alt);
+  }
+
+  .row-title {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: #1a1a2e;
+  }
+
+  .details-btn {
+    background-color: var(--color-navy);
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    padding: 0.55rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .details-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 600px) {
+    .experiment-row {
+      padding: 1.25rem 1.25rem;
+    }
+
+    .row-title {
+      font-size: 1rem;
+    }
+  }
+</style>

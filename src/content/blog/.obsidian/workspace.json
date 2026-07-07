@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "markdown-style-guide.md",
+                "file": "i hope england loses the world cup.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "markdown-style-guide"
+              "title": "i hope england loses the world cup"
             }
           }
         ]
@@ -185,9 +185,9 @@
   },
   "active": "e0ea3552b6b8ef98",
   "lastOpenFiles": [
-    "gohabsgo.md",
-    "first-post.md",
     "markdown-style-guide.md",
+    "i hope england loses the world cup.md",
+    "first-post.md",
     "third-post.md",
     "second-post.md"
   ]

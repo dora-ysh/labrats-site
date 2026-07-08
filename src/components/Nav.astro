@@ -1,3 +1,4 @@
+cat > /home/claude/labrats/src/components/Nav.astro << 'EOF'
 ---
 const navItems = [
   { label: 'Home', href: '/' },
@@ -6,19 +7,15 @@ const navItems = [
   { label: 'About Us', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
 ];
-
 const base = import.meta.env.BASE_URL; // e.g. "/labrats-site/"
-
 const withBase = (path: string) => {
   const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
   return `${cleanBase}${path}`.replace(/\/{2,}/g, '/');
 };
 ---
-
 <header class="site-header">
   <div class="header-inner">
     <a href={withBase('/')} class="logo">LABRATS</a>
-
     <div class="right-group">
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
@@ -31,14 +28,12 @@ const withBase = (path: string) => {
           }
         </ul>
       </nav>
-
       <a
         href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658"
         class="register-btn"
       >
         Register
       </a>
-
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -46,7 +41,6 @@ const withBase = (path: string) => {
       </button>
     </div>
   </div>
-
   <div class="mobile-panel">
     <ul>
       {
@@ -67,24 +61,20 @@ const withBase = (path: string) => {
     </ul>
   </div>
 </header>
-
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const header = document.querySelector('.site-header');
-
   toggle?.addEventListener('click', () => {
     const isOpen = header?.classList.toggle('menu-open');
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 </script>
-
 <style>
   .site-header {
     background-color: var(--color-navy);
     padding: 0.95rem 2rem;
     position: relative;
   }
-
   .header-inner {
     max-width: 1400px;
     margin: 0 auto;
@@ -93,7 +83,6 @@ const withBase = (path: string) => {
     justify-content: space-between;
     gap: 2rem;
   }
-
   .logo {
     font-family: var(--font-sans);
     font-weight: 800;
@@ -103,13 +92,11 @@ const withBase = (path: string) => {
     letter-spacing: 0.02em;
     flex-shrink: 0;
   }
-
   .right-group {
     display: flex;
     align-items: center;
     gap: 2rem;
   }
-
   .main-nav ul {
     display: flex;
     gap: 2rem;
@@ -117,7 +104,6 @@ const withBase = (path: string) => {
     margin: 0;
     padding: 0;
   }
-
   .main-nav a {
     font-family: var(--font-serif);
     color: #fff;
@@ -125,11 +111,9 @@ const withBase = (path: string) => {
     font-size: 1.05rem;
     white-space: nowrap;
   }
-
   .main-nav a:hover {
     text-decoration: underline;
   }
-
   .register-btn {
     background: #fff;
     color: var(--color-navy);
@@ -143,9 +127,9 @@ const withBase = (path: string) => {
     text-decoration: none;
     white-space: nowrap;
   }
-
   .menu-toggle {
     display: none;
+    justify-content: center;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -153,34 +137,38 @@ const withBase = (path: string) => {
     flex-direction: column;
     gap: 5px;
   }
-
   .menu-toggle span {
     display: block;
     width: 22px;
     height: 2px;
     background: #fff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
-
+  .site-header.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .site-header.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .site-header.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
   .mobile-panel {
     display: none;
   }
-
   @media (max-width: 900px) {
     .main-nav,
     .register-btn {
       display: none;
     }
-
     .menu-toggle {
       display: flex;
     }
-
     .mobile-panel {
       display: none;
       background: var(--color-navy);
       padding: 0.75rem 2rem 1.5rem;
     }
-
     .mobile-panel ul {
       list-style: none;
       display: grid;
@@ -188,13 +176,11 @@ const withBase = (path: string) => {
       margin: 0;
       padding: 0;
     }
-
     .mobile-panel a {
       color: #fff;
       text-decoration: none;
       font-family: var(--font-serif);
     }
-
     .site-header.menu-open .mobile-panel {
       display: block;
     }

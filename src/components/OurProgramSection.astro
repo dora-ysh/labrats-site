@@ -1,0 +1,147 @@
+---
+interface Props {
+  heading?: string;
+  description: string;
+  learnMoreUrl: string;
+  locationName: string;
+  addressLine1: string;
+  addressLine2: string;
+  mapEmbedUrl: string;
+}
+
+const {
+  heading = 'Our Program',
+  description,
+  learnMoreUrl,
+  locationName,
+  addressLine1,
+  addressLine2,
+  mapEmbedUrl,
+} = Astro.props;
+---
+
+<section class="our-program">
+  <div class="section-inner">
+    <h2>{heading}</h2>
+
+    <div class="content-grid">
+      <div class="map-column">
+        <div class="map-frame">
+          <iframe
+            src={mapEmbedUrl}
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            title={`Map showing ${locationName}`}
+          ></iframe>
+        </div>
+
+        <div class="location-info">
+          <p class="location-name">Location: {locationName}</p>
+          <p class="address">{addressLine1}</p>
+          <p class="address">{addressLine2}</p>
+        </div>
+      </div>
+
+      <div class="text-column">
+        <p class="description">{description}</p>
+        <a href={learnMoreUrl} class="learn-more" target="_blank" rel="noopener noreferrer">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .our-program {
+    background-color: var(--color-bg-light);
+    padding: 4rem 2rem;
+  }
+
+  .section-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .map-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .map-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .location-info {
+    margin-top: 1.5rem;
+  }
+
+  .location-name {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #1a1a2e;
+    margin-bottom: 0.4rem;
+  }
+
+  .address {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .description {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+  }
+
+  .learn-more {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    text-decoration: underline;
+  }
+
+  .learn-more:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 900px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>

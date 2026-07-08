@@ -8,6 +8,7 @@ const navItems = [
 ];
 
 const base = import.meta.env.BASE_URL;
+const joinBase = (path: string) => `${base}${path}`.replace(/\/{2,}/g, '/');
 ---
 
 <header class="site-header">
@@ -20,14 +21,19 @@ const base = import.meta.env.BASE_URL;
           {
             navItems.map((item) => (
               <li>
-                <a href={new URL(item.href, base).pathname}>{item.label}</a>
+                <a href={joinBase(item.href)}>{item.label}</a>
               </li>
             ))
           }
         </ul>
       </nav>
 
-      <a href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658" class="register-btn">Register</a>
+      <a
+        href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658"
+        class="register-btn"
+      >
+        Register
+      </a>
 
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -42,12 +48,17 @@ const base = import.meta.env.BASE_URL;
       {
         navItems.map((item) => (
           <li>
-            <a href={new URL(item.href, base).pathname}>{item.label}</a>
+            <a href={joinBase(item.href)}>{item.label}</a>
           </li>
         ))
       }
       <li>
-        <a href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658" class="mobile-register">Register</a>
+        <a
+          href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658"
+          class="mobile-register"
+        >
+          Register
+        </a>
       </li>
     </ul>
   </div>
@@ -99,6 +110,8 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .main-nav a {
@@ -169,6 +182,8 @@ const base = import.meta.env.BASE_URL;
       list-style: none;
       display: grid;
       gap: 0.75rem;
+      margin: 0;
+      padding: 0;
     }
 
     .mobile-panel a {

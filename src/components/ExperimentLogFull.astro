@@ -1,5 +1,6 @@
 ---
 import ExperimentRow from './ExperimentRow.astro';
+import SearchBar from './SearchBar.astro';
 
 interface Experiment {
   title: string;
@@ -17,6 +18,10 @@ const { experiments } = Astro.props;
   <div class="section-inner">
     <div class="section-header">
       <h2>Experiment Log</h2>
+    </div>
+
+    <div class="search-row">
+      <SearchBar />
     </div>
 
     <ul class="experiment-list">
@@ -53,6 +58,10 @@ const { experiments } = Astro.props;
     font-weight: 800;
     font-size: 2.25rem;
     color: #1a1a2e;
+  }
+
+  .search-row {
+    margin-bottom: 1.5rem;
   }
 
   .experiment-list {

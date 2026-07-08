@@ -14,25 +14,60 @@ const base = import.meta.env.BASE_URL;
   <div class="header-inner">
     <a href={base} class="logo">LABRATS</a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <ul>
-        {
-          navItems.map((item) => (
-            <li>
-              <a href={`${base}${item.href}`}>{item.label}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-    <a href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658?onlineSiteId=0&from_original_cui=true" class="register-btn">Register</a>
+    <div class="right-group">
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          {
+            navItems.map((item) => (
+              <li>
+                <a href={`${base}${item.href}`}>{item.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <a href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658" class="register-btn">Register</a>
+
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel">
+    <ul>
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={`${base}${item.href}`}>{item.label}</a>
+          </li>
+        ))
+      }
+      <li>
+        <a href="https://anc.ca.apm.activecommunities.com/vancouver/activity/search/detail/619658" class="mobile-register">Register</a>
+      </li>
+    </ul>
   </div>
 </header>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const header = document.querySelector('.site-header');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = header?.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
 
 <style>
   .site-header {
     background-color: var(--color-navy);
     padding: 1.25rem 2rem;
+    position: relative;
   }
 
   .header-inner {
@@ -52,6 +87,12 @@ const base = import.meta.env.BASE_URL;
     text-decoration: none;
     letter-spacing: 0.02em;
     flex-shrink: 0;
+  }
+
+  .right-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
 
   .main-nav ul {
@@ -90,15 +131,102 @@ const base = import.meta.env.BASE_URL;
     opacity: 0.9;
   }
 
+  /* Hamburger button — hidden until things stop fitting */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  .menu-toggle:focus,
+  .menu-toggle:active,
+  .menu-toggle:focus-visible {
+    background-color: transparent;
+    outline: none;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile dropdown panel — hidden by default */
+  .mobile-panel {
+    display: none;
+  }
+
   @media (max-width: 900px) {
-    .header-inner {
-      flex-wrap: wrap;
-      row-gap: 1rem;
+    .main-nav,
+    .register-btn {
+      display: none;
     }
 
-    .main-nav ul {
-      flex-wrap: wrap;
-      gap: 1rem 1.5rem;
+    .menu-toggle {
+      display: flex;
+    }
+
+    .mobile-panel {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .site-header.menu-open .mobile-panel {
+      display: block;
+      padding-top: 1.25rem;
+    }
+
+    .mobile-panel ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .mobile-panel a {
+      font-family: var(--font-serif);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    .mobile-panel a.mobile-register {
+      background: #fff;
+      color: var(--color-navy);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      display: inline-block !important;
+      width: fit-content;
     }
   }
 </style>

@@ -2,7 +2,6 @@
 title: 'Go Habs Go' 
 description: 'description? i dont even know bruh' 
 pubDate: '2026-07-07' 
-heroImage:
 time: "2 hours"
 difficulty: "Medium"
 ---

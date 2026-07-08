@@ -16,14 +16,16 @@ import ExperimentLogSection from '../components/ExperimentLogSection.astro';
 // }));
 
 const experiments = [
-  { title: 'Experiment Name (eg. Elephant Toothpaste)', slug: 'elephant-toothpaste' },
-  { title: 'Experiment Name (eg. Elephant Toothpaste)', slug: 'experiment-2' },
-  { title: 'Experiment Name (eg. Elephant Toothpaste)', slug: 'experiment-3' },
-  { title: 'Experiment Name (eg. Elephant Toothpaste)', slug: 'experiment-4' },
+  { title: 'Experiment 1 (eg. Elephant Toothpaste)', slug: 'experiment-1' },
+  { title: 'Experiment 2 (eg. Elephant Toothpaste)', slug: 'experiment-2' },
+  { title: 'Experiment 3 (eg. Elephant Toothpaste)', slug: 'experiment-3' },
+  { title: 'Experiment 4 (eg. Elephant Toothpaste)', slug: 'experiment-4' },
+  { title: 'Experiment 5 (eg. Elephant Toothpaste)', slug: 'experiment-5' },
+  { title: 'Experiment 6 (eg. Elephant Toothpaste)', slug: 'experiment-6' },
 ];
 ---
 
-<BaseLayout title="LABRATS — Sparking a lasting passion for STEM">
+<BaseLayout title="LABRATS">
   <Hero />
   <ExperimentLogSection experiments={experiments} />
 </BaseLayout>

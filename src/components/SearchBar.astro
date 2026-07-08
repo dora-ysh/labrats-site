@@ -1,0 +1,77 @@
+---
+---
+
+<div class="search-bar">
+  <svg
+    class="search-icon"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+  <input
+    type="text"
+    id="experiment-search"
+    placeholder="Search experiments..."
+    aria-label="Search experiments"
+  />
+</div>
+
+<script>
+  const input = document.getElementById('experiment-search') as HTMLInputElement | null;
+
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+    const rows = document.querySelectorAll<HTMLElement>('.experiment-row');
+
+    rows.forEach((row) => {
+      const title = row.querySelector('.row-title')?.textContent?.toLowerCase() ?? '';
+      row.style.display = title.includes(query) ? '' : 'none';
+    });
+  });
+</script>
+
+<style>
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background-color: #fff;
+    border: 1px solid #d5d9ec;
+    border-radius: 8px;
+    padding: 0.55rem 1.1rem;
+    max-width: 480px;
+  }
+
+  .search-icon {
+    color: #8a8fa3;
+    flex-shrink: 0;
+  }
+
+  .search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    width: 100%;
+  }
+
+  .search-bar input::placeholder {
+    color: #999;
+  }
+
+  @media (max-width: 600px) {
+    .search-bar {
+      max-width: 100%;
+    }
+  }
+</style>

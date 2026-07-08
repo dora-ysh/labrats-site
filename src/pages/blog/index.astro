@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ExperimentLogSection from '../../components/ExperimentLogSection.astro';
+import ExperimentLogFull from '../../components/ExperimentLogFull.astro';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -14,5 +14,5 @@ const experiments = posts.map((post) => ({
 ---
 
 <BaseLayout title="Experiment Log — LABRATS" description="Browse every LABRATS experiment.">
-  <ExperimentLogSection experiments={experiments} showSeeAll={false} />
+  <ExperimentLogFull experiments={experiments} />
 </BaseLayout>

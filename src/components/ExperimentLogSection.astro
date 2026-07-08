@@ -8,10 +8,9 @@ interface Experiment {
 
 interface Props {
   experiments: Experiment[];
-  showSeeAll?: boolean;
 }
 
-const { experiments, showSeeAll = true } = Astro.props;
+const { experiments } = Astro.props;
 
 const base = import.meta.env.BASE_URL; // e.g. "/labrats-site/"
 
@@ -21,12 +20,11 @@ const withBase = (path: string) => {
 };
 ---
 
-
 <section class="experiment-log">
   <div class="section-inner">
     <div class="section-header">
       <h2>Experiments</h2>
-      {showSeeAll && <a href={withBase('/blog')} class="see-all-btn">See All</a>}
+      <a href={withBase('/blog')} class="see-all-btn">See All</a>
     </div>
 
     <ul class="experiment-list">

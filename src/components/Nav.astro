@@ -1,19 +1,23 @@
 ---
 const navItems = [
-  { label: 'Home', href: '' },
-  { label: 'Experiment Log', href: 'blog/' },
-  { label: 'Kits', href: 'kits/' },
-  { label: 'About Us', href: 'about/' },
-  { label: 'Contact', href: 'contact/' },
+  { label: 'Home', href: '/' },
+  { label: 'Experiment Log', href: '/blog/' },
+  { label: 'Kits', href: '/kits/' },
+  { label: 'About Us', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
 ];
 
-const base = import.meta.env.BASE_URL;
-const joinBase = (path: string) => `${base}${path}`.replace(/\/{2,}/g, '/');
+const base = import.meta.env.BASE_URL; // e.g. "/labrats-site/"
+
+const withBase = (path: string) => {
+  const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${cleanBase}${path}`.replace(/\/{2,}/g, '/');
+};
 ---
 
 <header class="site-header">
   <div class="header-inner">
-    <a href={base} class="logo">LABRATS</a>
+    <a href={withBase('/')} class="logo">LABRATS</a>
 
     <div class="right-group">
       <nav class="main-nav" aria-label="Main navigation">
@@ -21,7 +25,7 @@ const joinBase = (path: string) => `${base}${path}`.replace(/\/{2,}/g, '/');
           {
             navItems.map((item) => (
               <li>
-                <a href={joinBase(item.href)}>{item.label}</a>
+                <a href={withBase(item.href)}>{item.label}</a>
               </li>
             ))
           }
@@ -48,7 +52,7 @@ const joinBase = (path: string) => `${base}${path}`.replace(/\/{2,}/g, '/');
       {
         navItems.map((item) => (
           <li>
-            <a href={joinBase(item.href)}>{item.label}</a>
+            <a href={withBase(item.href)}>{item.label}</a>
           </li>
         ))
       }

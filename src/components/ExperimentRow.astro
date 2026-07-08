@@ -7,12 +7,18 @@ interface Props {
 
 const { title, slug, index = 0 } = Astro.props;
 const isAlt = index % 2 === 1;
-const base = import.meta.env.BASE_URL;
+
+const base = import.meta.env.BASE_URL; // e.g. "/labrats-site/"
+
+const withBase = (path: string) => {
+  const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${cleanBase}${path}`.replace(/\/{2,}/g, '/');
+};
 ---
 
 <li class:list={['experiment-row', { alt: isAlt }]}>
   <span class="row-title">{title}</span>
-  <a href={`${base}/blog/${slug}`} class="details-btn">Details</a>
+  <a href={withBase(`/blog/${slug}/`)} class="details-btn">Details</a>
 </li>
 
 <style>
@@ -21,7 +27,7 @@ const base = import.meta.env.BASE_URL;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.75rem 2rem;
+    padding: 0.9rem 2rem;
     background-color: var(--color-bg-light);
   }
 
@@ -39,6 +45,7 @@ const base = import.meta.env.BASE_URL;
     background-color: transparent;
     color: var(--color-navy);
     font-family: var(--font-serif);
+    font-weight: 700;
     font-size: 0.95rem;
     text-decoration: underline;
     white-space: nowrap;
@@ -51,7 +58,7 @@ const base = import.meta.env.BASE_URL;
 
   @media (max-width: 600px) {
     .experiment-row {
-      padding: 0.6rem 1.25rem;
+      padding: 0.75rem 1.25rem;
     }
 
     .row-title {

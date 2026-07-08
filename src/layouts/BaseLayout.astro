@@ -1,33 +1,24 @@
 ---
-import Nav from '../components/Nav.astro';
+import BaseHead from '../components/BaseHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
 }
 
 const {
-  title,
-  description = 'LABRATS — Sparking a lasting passion for STEM',
+  title = 'LABRATS',
+  description = 'Programs and Experiment Log.',
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <BaseHead title={title} description={description} />
   </head>
+
   <body>
     <Nav />
     <main>
@@ -36,43 +27,3 @@ const {
     <Footer />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --color-navy: #28386d;
-    --color-bg-light: #f2f4fc;
-    --color-bg-section: #dadeef;
-    --color-row-alt: #e6e6e6;
-    --font-serif: 'Noto Serif', serif;
-    --font-sans: 'Inclusive Sans', sans-serif;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: var(--font-serif);
-    color: #1a1a2e;
-    background-color: var(--color-bg-light);
-  }
-
-  main {
-    display: block;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-  }
-</style>

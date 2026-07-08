@@ -1,5 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -31,7 +33,7 @@ const {
     <main>
       <slot />
     </main>
-    <!-- Footer will go here once you share that design -->
+    <Footer />
   </body>
 </html>
 

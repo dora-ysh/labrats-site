@@ -9,7 +9,7 @@
 - experiment posts written in markdown in obsidian
 - contact form: web3forms
 
-## repo structure
+### repo structure
 ```text
 ├── public/
 ├── src/

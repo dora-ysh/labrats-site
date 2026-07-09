@@ -6,6 +6,7 @@
 ### tech stack/info
 - framework: astro (no UI framework, custom html/css/javascript)
 - hosted on github pages
+- designed using figma
 - experiment posts written in markdown in obsidian
 - contact form: web3forms
 

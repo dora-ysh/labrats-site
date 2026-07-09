@@ -13,7 +13,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <form id="contact-form" class="contact-form">
         <input type="hidden" name="access_key" value="82656232-fd0f-4a0b-9361-fc7a2dd36749" />
 
-        <!-- Honeypot field: invisible to real people, catches basic spam bots -->
+        <!-- spam catcher LOL -->
         <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" />
 
         <div class="field">
@@ -70,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       if (result.success) {
         if (status) {
-          status.textContent = "Thanks — your message has been sent. We'll get back to you soon.";
+          status.textContent = "Thanks for your message! We'll get back to you ASAP.";
           status.className = 'form-status success';
         }
         form.reset();

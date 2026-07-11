@@ -1,27 +1,18 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import ExperimentLogSection from '../components/ExperimentLogSection.astro';
 import OurProgramSection from '../components/OurProgramSection.astro';
-// TEMPORARY!! once i make actual posts, replace
-// eg:
-//
-// import { getCollection } from 'astro:content';
-// const posts = (await getCollection('blog'))
-//   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-//   .slice(0, 4);
-// const experiments = posts.map((post) => ({
-//   title: post.data.title,
-//   slug: post.slug,
-// }));
-const experiments = [
-  { title: 'Experiment 1 (eg. Elephant Toothpaste)', slug: 'experiment-1' },
-  { title: 'Experiment 2 (eg. Elephant Toothpaste)', slug: 'experiment-2' },
-  { title: 'Experiment 3 (eg. Elephant Toothpaste)', slug: 'experiment-3' },
-  { title: 'Experiment 4 (eg. Elephant Toothpaste)', slug: 'experiment-4' },
-  { title: 'Experiment 5 (eg. Elephant Toothpaste)', slug: 'experiment-5' },
-  { title: 'Experiment 6 (eg. Elephant Toothpaste)', slug: 'experiment-6' },
-];
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
+
+const experiments = posts.map((post) => ({
+  title: post.data.title,
+  slug: post.id,
+}));
 ---
 <BaseLayout title="LABRATS">
   <Hero />

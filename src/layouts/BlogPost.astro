@@ -3,31 +3,26 @@ import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-
 type Props = CollectionEntry<'blog'>['data'];
-
 const {
   title,
   description,
   pubDate,
   heroImage,
-  author = 'LABRATS Executive Team',
+  author,
   time,
   difficulty,
   ageRange,
 } = Astro.props;
 ---
-
 <BaseLayout title={`${title} — LABRATS`} description={description}>
   <section class="post-page">
     <div class="post-inner">
       <h1>{title}</h1>
-
       <div class="byline">
-        <p>By: {author}</p>
+        {author && <p>By: {author}</p>}
         <p>Date Uploaded: <FormattedDate date={pubDate} /></p>
       </div>
-
       {
         heroImage && (
           <div class="hero-image">
@@ -35,7 +30,6 @@ const {
           </div>
         )
       }
-
       {
         (time || difficulty || ageRange) && (
           <div class="info-block">
@@ -48,28 +42,21 @@ const {
           </div>
         )
       }
-
-      <div class="instructions">
-        <h2>Instructions</h2>
-        <div class="prose">
-          <slot />
-        </div>
+      <div class="prose">
+        <slot />
       </div>
     </div>
   </section>
 </BaseLayout>
-
 <style>
   .post-page {
     background-color: var(--color-bg-section);
     padding: 3.5rem 2rem 5rem;
   }
-
   .post-inner {
     max-width: 900px;
     margin: 0 auto;
   }
-
   h1 {
     font-family: var(--font-sans);
     font-weight: 800;
@@ -77,28 +64,23 @@ const {
     color: #1a1a2e;
     margin-bottom: 1.5rem;
   }
-
   .byline {
     margin-bottom: 2rem;
   }
-
   .byline p {
     font-family: var(--font-serif);
     font-size: 1.05rem;
     color: #1a1a2e;
     line-height: 1.6;
   }
-
   .hero-image {
     margin-bottom: 2rem;
   }
-
   .hero-image :global(img) {
     width: 100%;
     border-radius: 8px;
     display: block;
   }
-
   h2 {
     font-family: var(--font-serif);
     font-weight: 700;
@@ -107,23 +89,19 @@ const {
     text-decoration: underline;
     margin-bottom: 0.75rem;
   }
-
   .info-block {
     margin-bottom: 2rem;
   }
-
   .info-block ul {
     list-style: disc;
     padding-left: 1.5rem;
   }
-
   .info-block li {
     font-family: var(--font-serif);
     font-size: 1.05rem;
     color: #1a1a2e;
     margin-bottom: 0.35rem;
   }
-
   .prose :global(p) {
     font-family: var(--font-serif);
     font-size: 1.05rem;
@@ -131,7 +109,6 @@ const {
     color: #1a1a2e;
     margin-bottom: 1.25em;
   }
-
   .prose :global(h2) {
     text-decoration: none;
     font-family: var(--font-sans);
@@ -140,7 +117,6 @@ const {
     margin-top: 1.75em;
     margin-bottom: 0.75em;
   }
-
   .prose :global(h3) {
     font-family: var(--font-sans);
     font-weight: 700;
@@ -148,31 +124,26 @@ const {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
   }
-
   .prose :global(ul),
   .prose :global(ol) {
     margin-bottom: 1.25em;
     padding-left: 1.5em;
     font-family: var(--font-serif);
   }
-
   .prose :global(li) {
     margin-bottom: 0.5em;
   }
-
   .prose :global(img) {
     width: 100%;
     margin: 1.5em 0;
     border-radius: 8px;
   }
-
   .prose :global(blockquote) {
     margin: 1.5em 0;
     padding-left: 1em;
     border-left: 3px solid var(--color-navy);
     font-style: italic;
   }
-
   @media (max-width: 600px) {
     h1 {
       font-size: 2rem;

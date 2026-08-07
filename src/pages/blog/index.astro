@@ -10,6 +10,9 @@ const posts = (await getCollection('blog')).sort(
 const experiments = posts.map((post) => ({
   title: post.data.title,
   slug: post.id,
+  time: post.data.time,
+  difficulty: post.data.difficulty,
+  tags: post.data.tags,
 }));
 ---
 

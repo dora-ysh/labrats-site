@@ -1,6 +1,6 @@
 ---
 title: 'Candle Carousels' 
-description: 'don't burn yourself'
+description: 'dont burn yourself'
 pubDate: '2026-05-31' 
 author: "LABRATS Executive Team"
 time: "1 hour"

@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  time?: string;
+  difficulty?: string;
+  tags?: string[];
+}
+
+const { title, slug, time, difficulty, tags } = Astro.props;
+
+const base = import.meta.env.BASE_URL; // e.g. "/labrats-site/"
+const withBase = (path: string) => {
+  const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${cleanBase}${path}`.replace(/\/{2,}/g, '/');
+};
+---
+
+<li class="experiment-row">
+  <div class="row-main">
+    <span class="row-title">{title}</span>
+
+    {
+      (time || difficulty) && (
+        <div class="row-meta">
+          {time && <p>Time: {time}</p>}
+          {difficulty && <p>Difficulty: {difficulty}</p>}
+        </div>
+      )
+    }
+
+    {
+      tags && tags.length > 0 && (
+        <p class="row-tags">{tags.map((tag) => `#${tag}`).join(' ')}</p>
+      )
+    }
+  </div>
+
+  <a href={withBase(`/blog/${slug}/`)} class="details-btn">Details</a>
+</li>
+
+<style>
+  .experiment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+  }
+
+  .row-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .row-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+  }
+
+  .row-meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row-meta p {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .row-tags {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 0.15rem;
+  }
+
+  .details-btn {
+    background-color: transparent;
+    color: var(--color-navy);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .details-btn:hover {
+    opacity: 0.7;
+  }
+</style>

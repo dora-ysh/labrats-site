@@ -1,7 +1,7 @@
 ---
 title: 'Circuits' 
 description: 'blah blah blah'
-pubDate: '2026-07-07' 
+pubDate: '2026-07-18' 
 author: "LABRATS Executive Team"
 time: "2+ hours"
 difficulty: "Difficult"

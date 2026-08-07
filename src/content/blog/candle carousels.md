@@ -1,7 +1,7 @@
 ---
 title: 'Candle Carousels' 
 description: 'don't burn yourself'
-pubDate: '2026-07-07' 
+pubDate: '2026-05-31' 
 author: "LABRATS Executive Team"
 time: "1 hour"
 difficulty: "Easy/Medium"

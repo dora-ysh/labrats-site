@@ -1,7 +1,7 @@
 ---
 title: 'Chromatography Butterflies' 
 description: 'whatever. i love butterflies'
-pubDate: '2026-07-07' 
+pubDate: '2026-06-07' 
 author: "LABRATS Executive Team"
 time: "1 hour"
 difficulty: "Easy/Medium"

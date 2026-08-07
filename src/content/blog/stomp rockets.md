@@ -1,7 +1,7 @@
 ---
 title: 'Stomp Rockets' 
 description: 'description? i dont even know bruh' 
-pubDate: '2026-07-07' 
+pubDate: '2026-08-01' 
 author: "LABRATS Executive Team"
 time: "2 hours"
 difficulty: "Medium"
@@ -9,6 +9,8 @@ tags: ["physics"]
 ---
 
 ## Introduction
+
+last updated/tested august 6 2026!
 
 i'm typing this on july 7, 2026, to confirm that the experiment log works and is easy to update from obsidian. while we're here here's some information about the montréal canadiens from wikipedia.
 

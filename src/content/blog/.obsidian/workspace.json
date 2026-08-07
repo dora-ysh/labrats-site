@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chromatography butterflies.md",
+                "file": "candle carousels.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "chromatography butterflies"
+              "title": "candle carousels"
             }
           }
         ]
@@ -185,10 +185,10 @@
   },
   "active": "e0ea3552b6b8ef98",
   "lastOpenFiles": [
-    "stomp rockets.md",
-    "flower dissection.md",
     "chromatography butterflies.md",
-    "candle carousels.md",
-    "circuits.md"
+    "circuits.md",
+    "flower dissection.md",
+    "stomp rockets.md",
+    "candle carousels.md"
   ]
 }

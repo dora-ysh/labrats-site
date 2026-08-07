@@ -5,6 +5,7 @@ pubDate: '2026-07-07'
 author: "LABRATS Executive Team"
 time: "2 hours"
 difficulty: "Medium"
+tags: ["chemistry", "physics"]
 ---
 
 ## Introduction

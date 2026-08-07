@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go habs.md",
+                "file": "markdown-style-guide.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "go habs"
+              "title": "markdown-style-guide"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "e0ea3552b6b8ef98",
   "lastOpenFiles": [
-    "markdown-style-guide.md",
     "go habs.md",
+    "markdown-style-guide.md",
     "first-post.md",
     "third-post.md",
     "second-post.md"

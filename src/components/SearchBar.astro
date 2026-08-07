@@ -35,7 +35,7 @@
       const title = row.querySelector('.row-title')?.textContent?.toLowerCase() ?? '';
       const tags = row.querySelector('.row-tags')?.textContent?.toLowerCase() ?? '';
       const matches = title.includes(query) || tags.includes(query);
-      row.style.display = title.includes(query) ? '' : 'none';
+      row.style.display = matches ? '' : 'none';
     });
   });
 </script>

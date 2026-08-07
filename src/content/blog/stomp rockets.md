@@ -1,11 +1,11 @@
 ---
-title: 'Go Habs Go' 
+title: 'Stomp Rockets' 
 description: 'description? i dont even know bruh' 
 pubDate: '2026-07-07' 
 author: "LABRATS Executive Team"
 time: "2 hours"
 difficulty: "Medium"
-tags: ["chemistry", "physics"]
+tags: ["physics"]
 ---
 
 ## Introduction

@@ -1,9 +1,11 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jun 19 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
-tags: ["chemistry"]
+title: 'Circuits' 
+description: 'blah blah blah'
+pubDate: '2026-07-07' 
+author: "LABRATS Executive Team"
+time: "2+ hours"
+difficulty: "Difficult"
+tags: ["physics", "engineering"]
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

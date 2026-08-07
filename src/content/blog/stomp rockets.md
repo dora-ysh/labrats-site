@@ -1,6 +1,5 @@
 ---
 title: 'Stomp Rockets' 
-description: 'description? i dont even know bruh' 
 pubDate: '2026-08-01' 
 author: "LABRATS Executive Team"
 time: "2 hours"

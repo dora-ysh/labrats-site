@@ -1,5 +1,6 @@
 ---
 title: 'Flower Dissection' 
+description: ""
 pubDate: '2026-07-25' 
 author: "LABRATS Executive Team"
 time: "2 hours"

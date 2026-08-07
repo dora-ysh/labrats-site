@@ -1,5 +1,6 @@
 ---
 title: 'Candle Carousels' 
+description: ""
 pubDate: '2026-05-31' 
 author: "LABRATS Executive Team"
 time: "1 hour"

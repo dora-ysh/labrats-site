@@ -1,5 +1,6 @@
 ---
 title: 'Chromatography Butterflies' 
+description: ""
 pubDate: '2026-06-07' 
 author: "LABRATS Executive Team"
 time: "1 hour"

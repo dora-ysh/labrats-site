@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.png';
+
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Experiment Log', href: '/blog/' },
@@ -14,7 +17,10 @@ const withBase = (path: string) => {
 ---
 <header class="site-header">
   <div class="header-inner">
-    <a href={withBase('/')} class="logo">LABRATS</a>
+    <a href={withBase('/')} class="logo">
+      <Image src={logo} alt="LABRATS logo" width={108} height={108} />
+      <span>LABRATS</span>
+    </a>
     <div class="right-group">
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
@@ -83,6 +89,9 @@ const withBase = (path: string) => {
     gap: 2rem;
   }
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-family: var(--font-sans);
     font-weight: 800;
     font-size: 1.5rem;
@@ -90,6 +99,12 @@ const withBase = (path: string) => {
     text-decoration: none;
     letter-spacing: 0.02em;
     flex-shrink: 0;
+  }
+  .logo img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
   }
   .right-group {
     display: flex;

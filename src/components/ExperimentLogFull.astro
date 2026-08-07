@@ -1,10 +1,13 @@
 ---
-import ExperimentRow from './ExperimentRow.astro';
+import ExperimentCard from './ExperimentCard.astro';
 import SearchBar from './SearchBar.astro';
 
 interface Experiment {
   title: string;
   slug: string;
+  time?: string;
+  difficulty?: string;
+  tags?: string[];
 }
 
 interface Props {
@@ -20,14 +23,18 @@ const { experiments } = Astro.props;
       <h2>Experiment Log</h2>
     </div>
 
-    <div class="search-row">
-      <SearchBar />
-    </div>
+    <SearchBar />
 
     <ul class="experiment-list">
       {
-        experiments.map((exp, i) => (
-          <ExperimentRow title={exp.title} slug={exp.slug} index={i} />
+        experiments.map((exp) => (
+          <ExperimentCard
+            title={exp.title}
+            slug={exp.slug}
+            time={exp.time}
+            difficulty={exp.difficulty}
+            tags={exp.tags}
+          />
         ))
       }
     </ul>
@@ -60,14 +67,8 @@ const { experiments } = Astro.props;
     color: #1a1a2e;
   }
 
-  .search-row {
-    margin-bottom: 1.5rem;
-  }
-
   .experiment-list {
     list-style: none;
-    border-radius: 4px;
-    overflow: hidden;
   }
 
   @media (max-width: 600px) {

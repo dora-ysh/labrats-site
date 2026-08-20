@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "flower dissection.md",
+                "file": "stomp rockets.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "flower dissection"
+              "title": "stomp rockets"
+            }
+          },
+          {
+            "id": "bd3c2ae217cc251e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "balloon powered car.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "balloon powered car"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,9 +198,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "e0ea3552b6b8ef98",
+  "active": "bd3c2ae217cc251e",
   "lastOpenFiles": [
-    "circuits.md",
+    "syntax-guide.md",
+    "balloon powered car.md",
     "chromatography butterflies.md",
     "candle carousels.md",
     "stomp rockets.md",

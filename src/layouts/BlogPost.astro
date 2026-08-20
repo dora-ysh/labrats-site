@@ -21,7 +21,7 @@ const {
       <h1>{title}</h1>
       <div class="byline">
         {author && <p>By: {author}</p>}
-        <p>Date Uploaded: <FormattedDate date={pubDate} /></p>
+        <p>Date of Experiment: <FormattedDate date={pubDate} /></p>
       </div>
       {
         heroImage && (
@@ -143,6 +143,15 @@ const {
     padding-left: 1em;
     border-left: 3px solid var(--color-navy);
     font-style: italic;
+  }
+  .prose :global(iframe) {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    border-radius: 8px;
+    margin: 1.5em 0;
   }
   @media (max-width: 600px) {
     h1 {

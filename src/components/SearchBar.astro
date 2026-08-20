@@ -19,7 +19,7 @@
   <input
     type="text"
     id="experiment-search"
-    placeholder="Search experiments..."
+    placeholder="Search by experiment name or tag..."
     aria-label="Search experiments"
   />
 </div>
@@ -33,7 +33,9 @@
 
     rows.forEach((row) => {
       const title = row.querySelector('.row-title')?.textContent?.toLowerCase() ?? '';
-      row.style.display = title.includes(query) ? '' : 'none';
+      const tags = row.querySelector('.row-tags')?.textContent?.toLowerCase() ?? '';
+      const matches = title.includes(query) || tags.includes(query);
+      row.style.display = matches ? '' : 'none';
     });
   });
 </script>

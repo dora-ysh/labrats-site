@@ -1,19 +1,21 @@
 ---
-title: 'Balloon-Powered Car' 
+title: Balloon-Powered Car
 description: ""
-pubDate: '2026-08-13' 
-author: "Dora Yuan | LABRATS Executive Team"
-time: "2+ hours"
-difficulty: "Medium"
-tags: ["physics", "engineering"]
-heroImage: '../../assets/balloon-cars.jpg'
+pubDate: 2026-08-13
+author: Dora Yuan | LABRATS Executive Team
+time: 2+ hours
+difficulty: Medium
+tags:
+  - physics
+  - engineering
+heroImage: ../../assets/balloon-cars.jpg
 ---
 
 ## Introduction
 
 This is an engaging and educational activity that gives students an opportunity to learn about physics, and then use their creativity and engineering skills to build a car. We found that students were engaged with both the lesson and the activity. Two hours is a good amount of time for this activity, although it is flexible.
 
-The setup for this activity was easy compared to other experiments.
+The setup for this activity was easy compared to other experiments. The cleanup was easy compared to other experiments.
 
 ## Materials
 
@@ -34,7 +36,7 @@ Here is a picture of the materials we used for this activity:
 
 Topics covered in the presentation include using Newton’s 3 laws to explain how the car works, and explaining force vs energy.
 
-Below is the presentation we made for this lesson. You may not use this presentation for commercial purposes.
+Below is part of the presentation we made for this lesson. You may not use this presentation for commercial purposes. Note that in the process of exporting our Canva presentation to Google Slides, certain fonts, animations, and components may not render properly.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRJCpS2On9oWIGqs5qzPd7Ew35QGo3TOmIu1C1gTZlbOaav9GnTuZFr8eyHygF_nw/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 

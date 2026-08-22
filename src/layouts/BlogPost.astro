@@ -13,6 +13,7 @@ const {
   time,
   difficulty,
   ageRange,
+  tags,
 } = Astro.props;
 ---
 <BaseLayout title={`${title} — LABRATS`} description={description}>
@@ -45,6 +46,9 @@ const {
       <div class="prose">
         <slot />
       </div>
+      {tags && tags.length > 0 && (
+        <p class="post-tags">{tags.map((tag) => `#${tag}`).join(' ')}</p>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -154,6 +158,12 @@ const {
     border: 0;
     border-radius: 8px;
     margin: 1.5em 0;
+  }
+  .post-tags {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 2rem;
   }
   @media (max-width: 600px) {
     h1 {

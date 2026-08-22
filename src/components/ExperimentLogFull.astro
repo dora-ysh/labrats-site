@@ -23,6 +23,8 @@ const { experiments } = Astro.props;
       <h2>Experiment Log</h2>
     </div>
 
+    <p class="log-description">Below is a list of experiments we have done in our programs. Please contact us if you have any questions, or would like any additional teaching resources.</p>
+
     <SearchBar />
 
     <ul class="experiment-list">
@@ -45,6 +47,13 @@ const { experiments } = Astro.props;
   .experiment-log {
     background-color: var(--color-bg-section);
     padding: 4rem 2rem;
+  }
+
+  .log-description {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 1.25rem;
   }
 
   .section-inner {

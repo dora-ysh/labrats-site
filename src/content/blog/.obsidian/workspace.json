@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "water filtration.md",
+                "file": "flower dissection.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "water filtration"
+              "title": "flower dissection"
             }
           }
         ],
@@ -232,11 +232,11 @@
   "lastOpenFiles": [
     "candle carousels.md",
     "chromatography butterflies.md",
-    "syntax-guide.md",
-    "flower dissection.md",
-    "stomp rockets.md",
-    "balloon powered car.md",
+    "water filtration.md",
     "paper roller coasters.md",
-    "water filtration.md"
+    "balloon powered car.md",
+    "stomp rockets.md",
+    "syntax-guide.md",
+    "flower dissection.md"
   ]
 }

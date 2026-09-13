@@ -2,7 +2,7 @@
 title: 'Stomp Rockets' 
 description: ""
 pubDate: '2026-08-01' 
-author: "LABRATS Executive Team"
+author: "Dora Yuan | LABRATS Executive Team"
 time: "1.5–2 hours"
 difficulty: "Medium"
 tags: ["physics", "engineering"]

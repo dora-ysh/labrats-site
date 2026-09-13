@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "water filtration"
             }
+          },
+          {
+            "id": "388626b2e1300e01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "paper roller coasters.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "paper roller coasters"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -214,10 +228,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "c3a5cba37bf455aa",
+  "active": "388626b2e1300e01",
   "lastOpenFiles": [
-    "balloon powered car.md",
     "water filtration.md",
+    "paper roller coasters.md",
+    "balloon powered car.md",
     "flower dissection.md",
     "syntax-guide.md",
     "chromatography butterflies.md",

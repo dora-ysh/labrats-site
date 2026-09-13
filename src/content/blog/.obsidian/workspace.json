@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "flower dissection.md",
+                "file": "candle carousels.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "flower dissection"
+              "title": "candle carousels"
             }
           }
         ],
@@ -230,13 +230,13 @@
   },
   "active": "388626b2e1300e01",
   "lastOpenFiles": [
-    "candle carousels.md",
-    "chromatography butterflies.md",
-    "water filtration.md",
-    "paper roller coasters.md",
-    "balloon powered car.md",
     "stomp rockets.md",
-    "syntax-guide.md",
-    "flower dissection.md"
+    "candle carousels.md",
+    "balloon powered car.md",
+    "paper roller coasters.md",
+    "water filtration.md",
+    "flower dissection.md",
+    "chromatography butterflies.md",
+    "syntax-guide.md"
   ]
 }

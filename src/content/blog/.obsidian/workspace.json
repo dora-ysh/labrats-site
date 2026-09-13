@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stomp rockets.md",
+                "file": "water filtration.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "stomp rockets"
+              "title": "water filtration"
             }
           }
         ],
@@ -230,13 +230,13 @@
   },
   "active": "388626b2e1300e01",
   "lastOpenFiles": [
-    "balloon powered car.md",
-    "stomp rockets.md",
-    "paper roller coasters.md",
     "candle carousels.md",
-    "water filtration.md",
     "chromatography butterflies.md",
+    "syntax-guide.md",
     "flower dissection.md",
-    "syntax-guide.md"
+    "stomp rockets.md",
+    "balloon powered car.md",
+    "paper roller coasters.md",
+    "water filtration.md"
   ]
 }

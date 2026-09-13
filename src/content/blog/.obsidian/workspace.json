@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "paper roller coasters.md",
+                "file": "stomp rockets.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "paper roller coasters"
+              "title": "stomp rockets"
             }
           }
         ],
@@ -230,13 +230,13 @@
   },
   "active": "388626b2e1300e01",
   "lastOpenFiles": [
-    "water filtration.md",
     "paper roller coasters.md",
+    "stomp rockets.md",
     "balloon powered car.md",
+    "water filtration.md",
     "flower dissection.md",
     "syntax-guide.md",
     "chromatography butterflies.md",
-    "stomp rockets.md",
     "candle carousels.md"
   ]
 }

@@ -22,6 +22,7 @@ Here are all the materials we used:
 - Tape
 - Cardstock
 - Template paper
+
 We got our templates from [ScienceBuddies](https://www.sciencebuddies.org/stem-activities/paper-roller-coaster) and printed them out on regular letter-sized paper.
 
 

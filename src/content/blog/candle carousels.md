@@ -39,6 +39,6 @@ The instructions to make this carousel are in the presentation above. We printed
 
 Here is a video of a working candle carousel:
 
-<video width="100%" controls>  <source src="../../assets/candlevid.mp4" type="video/mp4">  Sorry, your browser cant play this video or doesn't support the HTML video tag.  </video>
+<iframe src="https://drive.google.com/file/d/1DuRw_jChI6RsxGEJoUvMoR2ggI4jtOfp/preview" width="640" height="480"></iframe>
 
 After the activity, we gave students discussion questions to reflect on their learning. Theses questions can be found on the second-to-last slide of the presentation.
